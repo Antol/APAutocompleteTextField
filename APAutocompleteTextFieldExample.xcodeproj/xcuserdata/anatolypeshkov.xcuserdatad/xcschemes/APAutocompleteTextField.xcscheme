@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "359D9043185B1A6600A96263"
                BuildableName = "APAutocompleteTextField.app"
-               BlueprintName = "APAutocompleteTextField"
-               ReferencedContainer = "container:APAutocompleteTextField.xcodeproj">
+               BlueprintName = "APAutocompleteTextFieldExample"
+               ReferencedContainer = "container:APAutocompleteTextFieldExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "359D9064185B1A6600A96263"
                BuildableName = "APAutocompleteTextFieldTests.xctest"
-               BlueprintName = "APAutocompleteTextFieldTests"
-               ReferencedContainer = "container:APAutocompleteTextField.xcodeproj">
+               BlueprintName = "APAutocompleteTextFieldExampleTests"
+               ReferencedContainer = "container:APAutocompleteTextFieldExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "359D9043185B1A6600A96263"
             BuildableName = "APAutocompleteTextField.app"
-            BlueprintName = "APAutocompleteTextField"
-            ReferencedContainer = "container:APAutocompleteTextField.xcodeproj">
+            BlueprintName = "APAutocompleteTextFieldExample"
+            ReferencedContainer = "container:APAutocompleteTextFieldExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "359D9043185B1A6600A96263"
             BuildableName = "APAutocompleteTextField.app"
-            BlueprintName = "APAutocompleteTextField"
-            ReferencedContainer = "container:APAutocompleteTextField.xcodeproj">
+            BlueprintName = "APAutocompleteTextFieldExample"
+            ReferencedContainer = "container:APAutocompleteTextFieldExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "359D9043185B1A6600A96263"
             BuildableName = "APAutocompleteTextField.app"
-            BlueprintName = "APAutocompleteTextField"
-            ReferencedContainer = "container:APAutocompleteTextField.xcodeproj">
+            BlueprintName = "APAutocompleteTextFieldExample"
+            ReferencedContainer = "container:APAutocompleteTextFieldExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
