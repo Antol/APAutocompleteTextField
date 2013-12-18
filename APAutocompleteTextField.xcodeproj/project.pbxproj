@@ -21,6 +21,8 @@
 		359D9069185B1A6600A96263 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359D904B185B1A6600A96263 /* UIKit.framework */; };
 		359D9071185B1A6600A96263 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 359D906F185B1A6600A96263 /* InfoPlist.strings */; };
 		359D9073185B1A6600A96263 /* APAutocompleteTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 359D9072185B1A6600A96263 /* APAutocompleteTextFieldTests.m */; };
+		359D907F185B1ADD00A96263 /* APAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 359D907E185B1ADD00A96263 /* APAutocompleteTextField.m */; };
+		359D9080185B1ADD00A96263 /* APAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 359D907E185B1ADD00A96263 /* APAutocompleteTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		359D906E185B1A6600A96263 /* APAutocompleteTextFieldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "APAutocompleteTextFieldTests-Info.plist"; sourceTree = "<group>"; };
 		359D9070185B1A6600A96263 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		359D9072185B1A6600A96263 /* APAutocompleteTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APAutocompleteTextFieldTests.m; sourceTree = "<group>"; };
+		359D907D185B1ADD00A96263 /* APAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAutocompleteTextField.h; sourceTree = "<group>"; };
+		359D907E185B1ADD00A96263 /* APAutocompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAutocompleteTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		359D904D185B1A6600A96263 /* APAutocompleteTextField */ = {
 			isa = PBXGroup;
 			children = (
+				359D907C185B1A8C00A96263 /* Autocomplete text field */,
 				359D9056185B1A6600A96263 /* APAppDelegate.h */,
 				359D9057185B1A6600A96263 /* APAppDelegate.m */,
 				359D9059185B1A6600A96263 /* Main.storyboard */,
@@ -150,6 +155,15 @@
 				359D906F185B1A6600A96263 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		359D907C185B1A8C00A96263 /* Autocomplete text field */ = {
+			isa = PBXGroup;
+			children = (
+				359D907D185B1ADD00A96263 /* APAutocompleteTextField.h */,
+				359D907E185B1ADD00A96263 /* APAutocompleteTextField.m */,
+			);
+			name = "Autocomplete text field";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359D907F185B1ADD00A96263 /* APAutocompleteTextField.m in Sources */,
 				359D9054185B1A6600A96263 /* main.m in Sources */,
 				359D905E185B1A6600A96263 /* APViewController.m in Sources */,
 				359D9058185B1A6600A96263 /* APAppDelegate.m in Sources */,
@@ -260,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359D9080185B1ADD00A96263 /* APAutocompleteTextField.m in Sources */,
 				359D9073185B1A6600A96263 /* APAutocompleteTextFieldTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
