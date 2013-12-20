@@ -65,7 +65,7 @@
     NSString *complitedString = @"Soft Kitty, Warm Kitty, little ball of fur";
     NSRange originStringRange = [complitedString rangeOfString:originString];
     
-    if (originStringRange.location == NSNotFound) {
+    if (originStringRange.location != 0) {
         complitedString = nil;
     }
     
