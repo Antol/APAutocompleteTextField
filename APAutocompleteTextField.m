@@ -28,8 +28,6 @@
         _autocomplited = NO;
         
         self.selectionColor = [UIColor colorWithRed:0.8f green:0.87f blue:0.93f alpha:1.f];
-        
-        [self addTarget:self action:@selector(handleTap) forControlEvents:UIControlEventAllTouchEvents];
     }
     return self;
 }
@@ -140,8 +138,9 @@
     }
 }
 
-- (void)handleTap
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super touchesBegan:touches withEvent:event];
     [self applyCompletion];
 }
 
