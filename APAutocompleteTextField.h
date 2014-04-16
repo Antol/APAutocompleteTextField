@@ -11,7 +11,7 @@
 @class APAutocompleteTextField;
 
 @protocol APAutocompleteTextFieldDelegate <UITextFieldDelegate>
-- (NSString *)autocompleteTextField:(APAutocompleteTextField *)textField complitedStringForOriginString:(NSString *)originString;
+- (NSString *)autocompleteTextField:(APAutocompleteTextField *)textField completedStringForOriginString:(NSString *)originString;
 @end
 
 #pragma mark -
@@ -20,7 +20,7 @@
 
 @property(nonatomic,assign) id<APAutocompleteTextFieldDelegate> delegate;
 
-@property (nonatomic, readonly) BOOL autocomplited;
+@property (nonatomic, readonly) BOOL autocompleted;
 @property (nonatomic, strong) UIColor *selectionColor;
 
 - (void)applyCompletion;

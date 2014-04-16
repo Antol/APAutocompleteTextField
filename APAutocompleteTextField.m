@@ -12,12 +12,12 @@
 @end
 
 @implementation APAutocompleteTextField {
-    BOOL _autocomplited;
+    BOOL _autocompleted;
     NSUInteger _lengthOriginString;
 }
 
 @synthesize selectionColor = _selectionColor;
-@synthesize autocomplited = _autocomplited;
+@synthesize autocompleted = _autocompleted;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -25,7 +25,7 @@
     if (self) {
         self.autocorrectionType = UITextAutocorrectionTypeNo;
         
-        _autocomplited = NO;
+        _autocompleted = NO;
         
         self.selectionColor = [UIColor colorWithRed:0.8f green:0.87f blue:0.93f alpha:1.f];
     }
@@ -34,22 +34,22 @@
 
 - (void)applyCompletion
 {
-    if (_autocomplited) {
+    if (_autocompleted) {
         NSAttributedString *notMarkedString = [[NSAttributedString alloc] initWithString:self.text];
         
         self.attributedText = notMarkedString;
-        _autocomplited = NO;
+        _autocompleted = NO;
     }
 }
 
 - (void)removeCompletion
 {
-    if (_autocomplited) {
-        NSString *notComplitedString = [self.text substringToIndex:_lengthOriginString];
-        NSAttributedString *notComplitedAndNotMarkedString = [[NSAttributedString alloc] initWithString:notComplitedString];
+    if (_autocompleted) {
+        NSString *notCompletedString = [self.text substringToIndex:_lengthOriginString];
+        NSAttributedString *notCompletedAndNotMarkedString = [[NSAttributedString alloc] initWithString:notCompletedString];
         
-        self.attributedText = notComplitedAndNotMarkedString;
-        _autocomplited = NO;
+        self.attributedText = notCompletedAndNotMarkedString;
+        _autocompleted = NO;
     }
 }
 
@@ -57,7 +57,7 @@
 
 - (void)deleteBackward
 {
-    if (_autocomplited) {
+    if (_autocompleted) {
         [self removeCompletion];
     }
     else {
@@ -83,7 +83,7 @@
 - (CGRect)caretRectForPosition:(UITextPosition *)position
 {
     CGRect caretRect = CGRectZero;
-    if (!_autocomplited) {
+    if (!_autocompleted) {
         caretRect = [super caretRectForPosition:position];
     }
     return caretRect;
@@ -109,17 +109,17 @@
 
 - (void)handleReturnButton
 {
-    if (_autocomplited) {
+    if (_autocompleted) {
         NSAttributedString *stringWithoutSelection = [[NSAttributedString alloc] initWithString:self.text];
         self.attributedText = stringWithoutSelection;
         
-        _autocomplited = NO;
+        _autocompleted = NO;
     }
 }
 
 - (void)completeString
 {
-    NSMutableAttributedString *complitedAndMarkedString = nil;
+    NSMutableAttributedString *completedAndMarkedString = nil;
     
     NSString *endingString = [self endingString];
     if (endingString.length > 0) {
@@ -128,13 +128,13 @@
         NSRange markRange = NSMakeRange(_lengthOriginString, endingString.length);
         UIColor *markColor = self.selectionColor;
         
-        complitedAndMarkedString = [[NSMutableAttributedString alloc] initWithString:completedString];
-        [complitedAndMarkedString addAttribute:NSBackgroundColorAttributeName value:markColor range:markRange];
+        completedAndMarkedString = [[NSMutableAttributedString alloc] initWithString:completedString];
+        [completedAndMarkedString addAttribute:NSBackgroundColorAttributeName value:markColor range:markRange];
     }
     
-    if (complitedAndMarkedString.length > 0) {
-        self.attributedText = complitedAndMarkedString;
-        _autocomplited = YES;
+    if (completedAndMarkedString.length > 0) {
+        self.attributedText = completedAndMarkedString;
+        _autocompleted = YES;
     }
 }
 
@@ -149,13 +149,13 @@
     NSString *endingString = nil;
     
     if (self.text.length > 0) {
-        NSString *complitedString = [self.delegate autocompleteTextField:self complitedStringForOriginString:self.text];
+        NSString *completedString = [self.delegate autocompleteTextField:self completedStringForOriginString:self.text];
         
-        if (complitedString.length > 0) {
-            NSRange rangeOriginString = [complitedString rangeOfString:self.text];
+        if (completedString.length > 0) {
+            NSRange rangeOriginString = [completedString rangeOfString:self.text];
             NSAssert(rangeOriginString.location == 0, @"Wrong completion string");
             
-            endingString = [complitedString substringFromIndex:self.text.length];
+            endingString = [completedString substringFromIndex:self.text.length];
         }
     }
     return endingString;

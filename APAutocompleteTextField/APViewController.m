@@ -60,16 +60,16 @@
     _textField.text = @"triam";
 }
 
-- (NSString *)autocompleteTextField:(APAutocompleteTextField *)textField complitedStringForOriginString:(NSString *)originString
+- (NSString *)autocompleteTextField:(APAutocompleteTextField *)textField completedStringForOriginString:(NSString *)originString
 {
-    NSString *complitedString = @"Soft Kitty, Warm Kitty, little ball of fur";
-    NSRange originStringRange = [complitedString rangeOfString:originString];
+    NSString *completedString = @"Soft Kitty, Warm Kitty, little ball of fur";
+    NSRange originStringRange = [completedString rangeOfString:originString];
     
     if (originStringRange.location != 0) {
-        complitedString = nil;
+        completedString = nil;
     }
     
-    return complitedString;
+    return completedString;
 }
 
 @end
