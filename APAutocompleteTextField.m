@@ -97,6 +97,12 @@
     [super setText:text];
 }
 
+- (BOOL)resignFirstResponder
+{
+    [self applyCompletion];
+    return [super resignFirstResponder];
+}
+
 #pragma mark - Internal
 
 - (BOOL)isItReturnButtonPressed:(NSString *)text
