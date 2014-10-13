@@ -45,10 +45,15 @@
 - (void)removeCompletion
 {
     if (_autocompleted) {
-        NSString *notCompletedString = [self.text substringToIndex:_lengthOriginString];
-        NSAttributedString *notCompletedAndNotMarkedString = [[NSAttributedString alloc] initWithString:notCompletedString];
+        NSString *notCompletedString = self.text;
         
+        if (notCompletedString.length > _lengthOriginString) {
+            notCompletedString = [self.text substringToIndex:_lengthOriginString];
+        }
+        
+        NSAttributedString *notCompletedAndNotMarkedString = [[NSAttributedString alloc] initWithString:notCompletedString];
         self.attributedText = notCompletedAndNotMarkedString;
+        
         _autocompleted = NO;
     }
 }
@@ -107,9 +112,13 @@
 
 - (BOOL)isItReturnButtonPressed:(NSString *)text
 {
-    unichar symbol = [text characterAtIndex:0];
+    BOOL isItReturnButton = NO;
     
-    BOOL isItReturnButton = (symbol == 10);
+    if (text.length > 0) {
+        unichar symbol = [text characterAtIndex:0];
+        isItReturnButton = (symbol == 10);
+    }
+    
     return isItReturnButton;
 }
 
